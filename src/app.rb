@@ -40,22 +40,76 @@ sayHi("Nuru",70)
 # age = gets.chomp().to_s
 # puts ("Hello "+name+", you are "+age+" years old")
 
-puts "Enter First Number: "
-num1 = gets.chomp().to_f
-puts "Enter Operator: "
-op = gets.chomp()
-puts "Enter Second Number: "
-num2 = gets.chomp().to_f
+# puts "Enter First Number: "
+# num1 = gets.chomp().to_f
+# puts "Enter Operator: "
+# op = gets.chomp()
+# puts "Enter Second Number: "
+# num2 = gets.chomp().to_f
 
-if op == "+"
- puts (num1 + num2)
- elsif op == "-"
-  puts (num1 - num2)
- elsif op == "*"
-  puts (num1 * num2)
- elsif op == "/"
-  puts (num1 / num2)
+# if op == "+"
+#  puts (num1 + num2)
+#  elsif op == "-"
+#   puts (num1 - num2)
+#  elsif op == "*"
+#   puts (num1 * num2)
+#  elsif op == "/"
+#   puts (num1 / num2)
+#  else
+#   puts "Invalid Operator"
+# end
+
+
+## Case Expressions
+
+# def get_day_name(day)
+#   day_name = ""
+
+#   case day
+#     when "mon"
+#       day_name = "Monday"
+#     when "tue"
+#       day_name = "Tuesday"
+#     when "wed"
+#       day_name = "Wednesday"
+#     when "thur"
+#       day_name = "Thursday"
+#     when "fri"
+#       day_name = "Friday"
+#     when "sat"
+#       day_name = "Saturday"
+#     when "sun"
+#       day_name = "Sunday"            
+#   end
+
+#   return day_name
+# end
+
+# puts get_day_name("mon")
+
+## Guessing Game
+
+geuss_word = "Nurdin"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = false
+
+while guess != geuss_word and !out_of_guesses
+ if guess_count < guess_limit  
+  puts "Enter a guess: "
+  guess = gets.chomp()
+  guess_count += 1
+ 
  else
-  puts "Invalid Operator"
+  out_of_guesses = true
+ end
 end
+
+if out_of_guesses
+ puts "You Lost!"
+ else
+  puts "You won!"
+end
+
 
