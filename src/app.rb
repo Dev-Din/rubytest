@@ -97,7 +97,7 @@ out_of_guesses = false
 
 while guess != geuss_word and !out_of_guesses
  if guess_count < guess_limit  
-  puts "Enter a guess: "
+  puts "Enter a guess:"
   guess = gets.chomp()
   guess_count += 1
  
