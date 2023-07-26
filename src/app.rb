@@ -14,11 +14,11 @@
 # puts test.abs
 
 # methods
-def sayHi(name,age)
- puts ("Hello "+name+ ", you are "+age.to_s+" years old")
-end
+# def sayHi(name,age)
+#  puts ("Hello "+name+ ", you are "+age.to_s+" years old")
+# end
 
-sayHi("Nuru",70)
+# sayHi("Nuru",70)
 
 # def cube(num)
 #  num*3
@@ -89,27 +89,40 @@ sayHi("Nuru",70)
 
 ## Guessing Game
 
-geuss_word = "Nurdin"
-guess = ""
-guess_count = 0
-guess_limit = 3
-out_of_guesses = false
+# geuss_word = "Nurdin"
+# guess = ""
+# guess_count = 0
+# guess_limit = 3
+# out_of_guesses = false
 
-while guess != geuss_word and !out_of_guesses
- if guess_count < guess_limit  
-  puts "Enter a guess:"
-  guess = gets.chomp()
-  guess_count += 1
+# while guess != geuss_word and !out_of_guesses
+#  if guess_count < guess_limit  
+#   puts "Enter a guess:"
+#   guess = gets.chomp()
+#   guess_count += 1
  
- else
-  out_of_guesses = true
- end
+#  else
+#   out_of_guesses = true
+#  end
+# end
+
+# if out_of_guesses
+#  puts "You Lost!"
+#  else
+#   puts "You won!"
+# end
+
+# Class Methods Basics
+
+class Book
+  attr_accessor :title, :author, :chapters
 end
 
-if out_of_guesses
- puts "You Lost!"
- else
-  puts "You won!"
-end
+book1 = Book.new()
+book1.title = "Quran"
+book1.author = "Allah"
+book1.chapters = 114
+
+puts book1.chapters
 
 
