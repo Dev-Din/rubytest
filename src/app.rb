@@ -146,3 +146,81 @@
 # book1 = Book.new("Quran", "Allah", 114)
 
 # puts book1.title
+
+## Building a quiz app in the terminal
+
+# From Tutorial
+=begin
+
+class Questions
+  attr_accessor :prompt, :answer
+  def initialize(prompt, answer)
+    @prompt = prompt
+    @answer = answer
+  end
+end
+
+prompt1 = "What is 1 + 1\n(a)2\n(b)2"
+prompt2 = "What is 1 + 2\n(a)3\n(b)2"
+prompt3 = "What is 1 + 3\n(a)2\n(b)4"
+
+questions = [
+  Questions.new(prompt1, "a"),
+  Questions.new(prompt2, "a"),
+  Questions.new(prompt3, "b")
+]
+def run_test(questions)
+  answer = ""
+  score = 0
+  for question in questions
+    puts question.prompt
+    answer = gets.chomp()
+    if answer == question.answer
+      score += 1
+    end
+  end
+  puts ("You got "+ score.to_s + "/" + questions.length().to_s)
+end
+
+run_test(questions)
+=end
+
+# Self- Written Code!
+=begin
+
+
+class Maswali
+  attr_accessor :swali, :jibu
+  def initialize(swali, jibu)
+    @swali = swali
+    @jibu = jibu
+  end
+end
+
+swali1 = "1 + 1\n(a)29\n(b)2"
+swali2 = "10 + 10\n(a)20\n(b)21"
+swali3 = "100 + 100\n(a)20\n(b)200"
+
+maswali =[
+  Maswali.new(swali1, "b"),
+  Maswali.new(swali2, "a"),
+  Maswali.new(swali3, "b")
+]
+
+def chemsha_bongo(maswali)
+  jibu = ""
+  alama = 0
+  for swali in maswali
+    puts swali.swali
+    jibu = gets.chomp()
+    if jibu == swali.jibu
+      alama +=1
+    end
+  end
+  puts ("Umepata " +alama.to_s+ "/" +maswali.length().to_s)
+end
+
+chemsha_bongo(maswali)
+=end
+
+
