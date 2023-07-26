@@ -114,15 +114,35 @@
 
 # Class Methods Basics
 
-class Book
-  attr_accessor :title, :author, :chapters
-end
+# class Book
+#   attr_accessor :title, :author, :chapters
+# end
 
-book1 = Book.new()
-book1.title = "Quran"
-book1.author = "Allah"
-book1.chapters = 114
+# book1 = Book.new()
+# book1.title = "Quran"
+# book1.author = "Allah"
+# book1.chapters = 114
 
-puts book1.chapters
+# puts book1.chapters
+
+# Class Methods Intermediate
+
+=begin
+  Above, we created a basic class method. We will now shorten the code
+  such that it will be time saving. We will employ a new method called initialize()
+  which will work hand in hhand with the .new() method. Backle up!
+=end
 
 
+# class Book
+#   attr_accessor :title, :author, :chapters
+#   def initialize(title, author, chapters)
+#     @title = title
+#     @author = author
+#     @chapters = chapters
+#   end
+# end
+
+# book1 = Book.new("Quran", "Allah", 114)
+
+# puts book1.title
